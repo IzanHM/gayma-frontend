@@ -1,5 +1,5 @@
 // src/api/votos.js
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:9090";
+const API_URL = import.meta.env.VITE_API_URL || "https://premios-gayma-backend.onrender.com";
 
 export async function enviarVotos(codigo, votos) {
     try {
