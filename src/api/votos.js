@@ -1,7 +1,9 @@
 // src/api/votos.js
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:9090";
+
 export async function enviarVotos(codigo, votos) {
     try {
-        const response = await fetch(`http://localhost:9090/votantes/votos/${codigo}`, {
+        const response = await fetch(`${API_URL}/votantes/votos/${codigo}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
