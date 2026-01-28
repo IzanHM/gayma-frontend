@@ -26,7 +26,9 @@ function Home() {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:9090/votantes/${codigo}`);
+      // CORRECCIÓN: Ahora apunta a Render en lugar de localhost
+      const res = await fetch(`https://premios-gayma-backend.onrender.com/votantes/${codigo}`);
+      
       if (!res.ok) {
         setError("Código inválido");
         return;
@@ -63,14 +65,14 @@ function Home() {
         padding: 0,
       }}
     >
-      {/* Logo Izquierda (LogoPremios) - Ajustado un poco más a la derecha */}
+      {/* Logo Izquierda (LogoPremios) */}
       <Box
         component="img"
         src={LogoPremios}
         sx={{
           position: "absolute",
-          left: { xs: "5%", md: "10%" }, // Aumentado de 8% a 10% para moverlo a la derecha
-          height: { xs: "100px", md: "400px" }, // Tamaño fijo igualado
+          left: { xs: "5%", md: "10%" },
+          height: { xs: "100px", md: "400px" },
           width: "auto",
           objectFit: "contain"
         }}
@@ -83,7 +85,7 @@ function Home() {
         sx={{
           position: "absolute",
           right: { xs: "5%", md: "0.5%" }, 
-          height: { xs: "100px", md: "470px" }, // Exactamente el mismo que el otro
+          height: { xs: "100px", md: "470px" },
           width: "auto",
           objectFit: "contain"
         }}

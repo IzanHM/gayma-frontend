@@ -21,7 +21,8 @@ function Resumen() {
         setError("");
 
         try {
-            const res = await fetch(`http://localhost:9090/votantes/votos/${votante.codigo}`, {
+            // CORRECCIÓN: Se cambia localhost por la URL de Render
+            const res = await fetch(`https://premios-gayma-backend.onrender.com/votantes/votos/${votante.codigo}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(votos)
