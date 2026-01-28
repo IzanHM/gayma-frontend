@@ -16,7 +16,7 @@ function App() {
 
         {/* Única página que conserva el Layout (si así lo deseas) */}
         <Route
-          path="/*"
+          path="/*" 
           element={
             <Layout>
               <Routes>
@@ -26,7 +26,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter>  
   );
 }
 
